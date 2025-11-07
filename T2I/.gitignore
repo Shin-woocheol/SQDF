@@ -1,0 +1,10 @@
+wandb/
+logs/
+.vscode
+*.pyc
+checkpoints/
+eval/
+models/
+scorers/
+buffer/
+
