@@ -36,7 +36,7 @@ class AestheticScorerDiff(torch.nn.Module):
         self.dtype = dtype
         self.eval()
 
-    def __call__(self, images): #* 객체를 함수처럼 호출하게 해줌.
+    def __call__(self, images):
         device = next(self.parameters()).device
         embed = self.clip.get_image_features(pixel_values=images)
         embed = embed / torch.linalg.vector_norm(embed, dim=-1, keepdim=True)

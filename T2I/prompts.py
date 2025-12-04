@@ -66,7 +66,7 @@ def sanitize_prompt(s: str, max_len: int = 30) -> str:
     and avoiding trailing spaces.
     """
     # Replace non-alphanumeric characters and underscores with spaces
-    s = re.sub(r'[^0-9A-Za-z가-힣 ]', ' ', s)
+    s = re.sub(r'[^0-9A-Za-z ]', ' ', s)
     # Trim and collapse multiple spaces
     s = re.sub(r'\s+', ' ', s).strip()
     # Apply max length limit
